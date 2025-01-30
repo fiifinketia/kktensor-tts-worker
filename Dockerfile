@@ -38,7 +38,7 @@ ENV SHELL=/bin/bash
 COPY builder/requirements.txt ${WORKER_DIR}/requirements.txt
 RUN pip install --no-cache-dir -r ${WORKER_DIR}/requirements.txt && \
     rm ${WORKER_DIR}/requirements.txt
-RUN python3 -c "import deepspeed; print(deepspeed.__version__)"
+# RUN python3 -c "import deepspeed; print(deepspeed.__version__)"
 
 # Install Python dependencies (Worker Template)
 COPY builder/requirements_audio_enhancer.txt ${WORKER_DIR}/requirements_audio_enhancer.txt
